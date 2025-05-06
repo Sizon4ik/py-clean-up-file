@@ -1,5 +1,4 @@
 import os
-from typing import Self
 
 
 class CleanUpFile:
@@ -7,7 +6,7 @@ class CleanUpFile:
         self.filename = filename
         self.file = None
 
-    def __enter__(self) -> Self:
+    def __enter__(self) -> "CleanUpFile":
         return self
 
     def __exit__(self, exc_type: None, exc_val: None, exc_tb: None) -> None:
